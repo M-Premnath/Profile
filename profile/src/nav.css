@@ -1,0 +1,94 @@
+.navbar{
+    background-color: #222;
+    position: relative;
+    height: 3rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    color: white;
+}
+.navbar i{
+    display: none;
+}
+.logo{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.menu-list ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    color:#333;
+}
+.menu-list  a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.menu-list a:hover{
+    text-decoration: solid underline 2px;
+}
+button{
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode button styles */
+button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Dark mode button styles */
+body.dark-mode button {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+/* Dark mode navbar styles */
+body.dark-mode .navbar {
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+body.dark-mode .menu-list a {
+    color: #f0f0f0;
+    background-color: #222;
+}
+
+/* Dark mode body styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+
+/* Ensure default styles are for light mode */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .menu-list ul{
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      padding: 1rem;
+    }
+    .navbar i{
+        display: block;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+}
